@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Здравствуйте</h1>
+<div mat-dialog-content>
+  <p>Введите Ваш личный код для прохождения опроса.</p>
+  <p>Если у Вас его нет, новая запись будет создана автоматически.</p>
+  <mat-form-field>
+    <mat-label>Личный код</mat-label>
+    <input matInput [(ngModel)]="code">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Отмена</button>
+  <button mat-button [routerLink]="['poll', code]" cdkFocusInitial mat-dialog-close [disabled]="!code">Продолжить</button>
+</div>

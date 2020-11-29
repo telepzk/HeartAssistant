@@ -1,0 +1,25 @@
+ha-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56.297px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 720px) {
+    .content {
+        top: 92px;
+    }
+}

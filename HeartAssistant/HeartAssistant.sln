@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartAssistant.Web", "HeartAssistant.Web\HeartAssistant.Web.csproj", "{38303493-389D-4933-98CB-BD1558BD6E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeartAssistant.Core", "HeartAssistant.Core\HeartAssistant.Core.csproj", "{2B52B46A-3DDB-406F-9729-F02676A8A093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38303493-389D-4933-98CB-BD1558BD6E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38303493-389D-4933-98CB-BD1558BD6E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38303493-389D-4933-98CB-BD1558BD6E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38303493-389D-4933-98CB-BD1558BD6E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B52B46A-3DDB-406F-9729-F02676A8A093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B52B46A-3DDB-406F-9729-F02676A8A093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B52B46A-3DDB-406F-9729-F02676A8A093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B52B46A-3DDB-406F-9729-F02676A8A093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B73B0A45-FBF9-495E-B0DC-DCA0052B40A6}
+	EndGlobalSection
+EndGlobal

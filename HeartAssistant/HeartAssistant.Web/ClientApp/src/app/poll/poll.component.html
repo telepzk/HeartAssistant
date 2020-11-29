@@ -1,0 +1,69 @@
+
+<div class="container-flex">
+    <mat-card *ngIf="respondent">
+        <mat-card-header>
+            <mat-card-title>Анкета №{{ respondent.code }}</mat-card-title>
+            <mat-card-subtitle>Информация о пользователе</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>В опросе {{ questions.length }} вопросов. Вы ответили на {{ answers.length }}.</p>
+            <p>Неотвеченных вопросов {{ unanswered.length }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="container-flex" *ngIf="respondent">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Прогнозирование</mat-card-title>
+            <mat-card-subtitle>Вероятность возникновения заболевания</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div *ngIf="prediction; else elseBlock">
+                <p>Артериальная гипертензия: {{ prediction['art'] }}</p>
+                <p>ОНМК: {{ prediction['omnk'] }}</p>
+                <p>Стенокардия, ИБС, инфаркт миокарда: {{ prediction['steno'] }}</p>
+                <p>Сердечная недостаточность: {{ prediction['serd_ned'] }}</p>
+                <p>Прочие заболевания сердца: {{ prediction['proch'] }}</p>
+            </div>
+            <ng-template #elseBlock>Ни одного прогноза не сформировано.</ng-template>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="createPrediction()">Сформировать</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="container-flex">
+    <mat-card *ngIf="unanswered">
+        <mat-card-header>
+            <mat-card-title>Вопрос</mat-card-title>
+            <mat-card-subtitle>Текущий вопрос для ответа</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            
+            <mat-form-field>
+                <mat-label>{{ unanswered[0]?.name }}</mat-label>
+                <input [(ngModel)]="value" type="tel" matInput>
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+                <!-- <mat-form-field>
+                    <mat-label>Место проживания</mat-label>
+                    <mat-select [(value)]="placeOfResidence">
+                      <mat-option value="1">Город</mat-option>
+                      <mat-option value="2">Село</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Дата рождения</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field> -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="onSave()">Ответить</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

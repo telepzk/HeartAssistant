@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Опросы</h1>
+    <p>Список проводимых опросов:</p>
+    <mat-list role="list">
+        <mat-list-item *ngFor="let poll of polls" role="listitem">{{ poll.name }}</mat-list-item>
+    </mat-list>
+</div>

@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Респонденты</h1>
+    <p>Список пациентов, прошедших опрос:</p>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <ha-respondents-list [respondents]="respondents"></ha-respondents-list>
+</div>

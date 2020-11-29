@@ -1,0 +1,20 @@
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mat-nav-list-content {
+    width: 240px;
+}
+
+.mat-drawer, .mat-drawer-content {
+    background-color: inherit;
+}
+
+mat-icon {
+    margin-left: 5px;
+    color: #3f51b5;
+}

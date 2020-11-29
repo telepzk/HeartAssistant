@@ -1,0 +1,18 @@
+<div class="container" *ngIf="respondent">
+    <h1>Респондент {{ respondent.code }}</h1>
+    <div class="prediction-block">
+      <div *ngIf="prediction; else elseBlock">
+        <p>Артериальная гипертензия: {{ prediction['art'] }}</p>
+        <p>ОНМК: {{ prediction['omnk'] }}</p>
+        <p>Стенокардия, ИБС, инфаркт миокарда: {{ prediction['steno'] }}</p>
+        <p>Сердечная недостаточность: {{ prediction['serd_ned'] }}</p>
+        <p>Прочие заболевания сердца: {{ prediction['proch'] }}</p>
+    </div>
+    <ng-template #elseBlock><p>Ни одного прогноза не сформировано.</p></ng-template>
+      <a mat-raised-button color="primary" (click)="predict()">
+        Сформировать
+      </a>
+    </div>
+    <h3>Ответы на вопросы</h3>
+    <ha-answers-list [answers]="answers"></ha-answers-list>
+</div>
