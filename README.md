@@ -47,7 +47,7 @@
 * f1_score - 0.55
 
 
-# Структура директории
+### Структура директории
 
 ```
 .
@@ -68,3 +68,19 @@
 |   |-- tuning_serd_ned.ipynb
 |   `-- tuning_steno.ipynb
 ```
+
+# Запуск приложения
+### Запуск heart-prediction
+Решение для инференса модели реализовано на языке Python  3.8.5 x64.
+1. Открыть в консоли каталог `heart-prediction`
+2. Создать виртуальное окружение Python `python -m venv venv` и активировать его `.\venv\scripts\activate`
+3. Установить необходимые зависимости `pip install -r requirements.txt`
+4. Запустить приложение `python app.py`
+
+
+### Запуск HeartPrediction
+Решение для инференса модели реализовано на языке .NET Core 3.1 + Angular 11. В качестве БД используется PostgreSQL
+1. Открыть в консоли каталог `HeartAssistant\HeartAssistant.Web`
+2. Установить необходимые зависимости `dotnet restore`
+3. Сконфигурировать строку подключения к PostgreSQ: в файле `appsettings.json`
+4. Запустить приложение `dotnet run` (первый запуск соберет необходимые модули npm и создаст БД. Необходимо время.)
